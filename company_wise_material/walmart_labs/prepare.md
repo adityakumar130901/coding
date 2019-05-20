@@ -34,10 +34,9 @@
         8)Can you override methods of Arraylist?If so how?
         9)Difference between Hash Map and Tree Map
         10) Explain Concurrent hash map . (and few more which I am not able to recall)
+        11) How hashmap works ? 
+        12) Write your own immuatble class ?
         
-     
-     
-     
     
  discussion on REST services.
  

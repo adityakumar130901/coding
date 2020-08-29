@@ -1,0 +1,32 @@
+Base Cases: If any of the string is null then LCS will be 0.
+
+Check if ith character in one string A is equal to jth character in string B
+
+Case 1: both characters are same
+
+LCS[i][j] = 1 + LCS[i-1][j-1] (add 1 to the result and remove the last character from both the strings and check the result for the smaller string.)
+
+Case 2: both characters are not same.
+
+LCS[i][j] = 0
+
+At the end, traverse the matrix and find the maximum element in it, This will the length of Longest Common Substring.
+
+Matrix Approach
+
+ - Diagional move ensures we are making one char advance on both strings
+ 
+ - Right travesered ie str[i][j+1] means column string is traversed
+ 
+ - Down Traversed ie str[i+1][j] mean row string is traversed
+ 
+ soln:
+ 
+ if(A[i-1]==B[j-1])
+ {
+      LCS[i][j] =  LCS[i-1][j-1] +1;
+  }
+  else
+  {
+			 LCS[i][j] = 0;					
+	}

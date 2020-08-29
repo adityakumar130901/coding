@@ -1,0 +1,27 @@
+Case 1: 
+
+String A: "ABCD", String B: "AEBD"
+
+LCS("ABCD", "AEBD") = 1 + LCS("ABC", "AEB")
+
+Case 2: 
+
+String A: "ABCDE", String B: "AEBDF"
+
+LCS("ABCDE", "AEBDF") = Max(LCS("ABCDE", "AEBD"), LCS("ABCD", "AEBDF"))
+
+Matrix Approach
+
+ - Diagional move ensures we are making one char advance on both strings
+ 
+ - Right travesered ie str[i][j+1] means column string is traversed
+ 
+ - Down Traversed ie str[i+1][j] mean row string is traversed
+ 
+ soln:
+ 
+ 
+ if str1[i][j] == str2[i][j]:
+    LCS[i][j] = 1 + LCS[i-1][j-1]
+ else:
+     LCS[i][j] = max( LCS[i-1][j], LCS[i][j-1] )

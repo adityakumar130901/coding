@@ -1,0 +1,17 @@
+Kafka vs RabbitMq
+
+- kakfa is preferred in our project since it provides message ordering which is reqd by our fraud project. RabbitMq does not support ordering
+
+- kafka is a log which means messages are always there. rabbitmq is a queue so msgs are gone once read and acknowledged
+
+- kafka guarantees atomicity as whole batch of msgs either pass or fail. rabbitmq does not gurantee atomicity
+
+- kafka supports replays which is not supported by rabbitmq
+
+- our service may go down hence we need replay support
+
+- matching tool used rabbitmq hence ordering was needed and any consumer which consumed the msg it is no longer reqd
+
+- kafka is faster as it uses sequential disk I/O to boost performance. rabbitmq can also process many msgs but needs more resource
+
+- kafka is faster since it has concept of partitions and multiple borkers etc
